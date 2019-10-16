@@ -75,6 +75,7 @@ p {
   background: #ffffff;
   border-radius: 3px;
   padding: 20px;
+  box-shadow: #212529;
   margin-bottom: 30px;
 }
 
@@ -87,10 +88,44 @@ p {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.5rem;
+
 }
 
 .app-title h1 {
   margin: 0;
   font-size: 24px;
   font-weight: 400;
+}
+
+.app-title p {
+  margin-left: 20px;
+}
+
+.insight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+fieldset { 
+  margin-top: 20px;
+  width: 150px;
+  padding: 10px;
+  height: 150px;
+}
+
+fieldset .value {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 50px;
+}
+
+fieldset .key {
+  font-size: 16px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
 }
