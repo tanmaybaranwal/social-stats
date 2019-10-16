@@ -1,0 +1,35 @@
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+.row {
+  display: flex;
+
+}
+.insight {
+  display: flex;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 300px;
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid;
+  font: normal 16px/1 Tahoma, Geneva, sans-serif;
+  color: rgba(86,76,163,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.key {
+  color: #4b545f;
+  }
+
+p {
+    color: #E64A19;
+  }

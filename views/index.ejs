@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SoMS: Social Media Stats</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="insight">
+                <% if(insights !== null){ %>
+                <div class="key">Facebook: <%= insights.facebook %></div>
+                <% } %>
+                <% if(error !== null){ %>
+                <p><%= error %></p>
+                <% } %>
+            </div>
+            <div class="insight">
+                    <% if(insights !== null){ %>
+                    <div class="key">Facebook: <%= insights.facebook %></div>
+                    <% } %>
+                    <% if(error !== null){ %>
+                    <p><%= error %></p>
+                    <% } %>
+                </div>
+                <div class="insight">
+                        <% if(insights !== null){ %>
+                        <div class="key">Facebook: <%= insights.facebook %></div>
+                        <% } %>
+                        <% if(error !== null){ %>
+                        <p><%= error %></p>
+                        <% } %>
+                    </div>
+
+        </div>
+        
+    </div>
+    <div class="container">
+            <div class="row">
+                <div class="insight">
+                    <% if(insights !== null){ %>
+                    <div class="key">Facebook: <%= insights.facebook %></div>
+                    <% } %>
+                    <% if(error !== null){ %>
+                    <p><%= error %></p>
+                    <% } %>
+                </div>
+                <div class="insight">
+                        <% if(insights !== null){ %>
+                        <div class="key">Facebook: <%= insights.facebook %></div>
+                        <% } %>
+                        <% if(error !== null){ %>
+                        <p><%= error %></p>
+                        <% } %>
+                    </div>
+                    <div class="insight">
+                            <% if(insights !== null){ %>
+                            <div class="key">Facebook: <%= insights.facebook %></div>
+                            <% } %>
+                            <% if(error !== null){ %>
+                            <p><%= error %></p>
+                            <% } %>
+                        </div>
+    
+            </div>
+            
+        </div>
+  </body>
+</html>
