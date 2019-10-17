@@ -69,7 +69,45 @@
                             <div class="tile">
                                 <h3 class="tile-title">LinkedIn</h3>
                                 <div class="insight">
-                                    
+                                        <fieldset>
+                                                <div class="value"><%= insights.linkedin.companyStatistics.current_value %></div>
+                                                <div class="key">Comapny Stats</div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="value"><%= insights.linkedin.followerStatistics.current_value %></div>
+                                                <div class="key">Follower Stats</div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="value"><%= insights.linkedin.socialAction.current_value %></div>
+                                                <div class="key">Social Action</div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="value">
+                                                    <%if (insights.linkedin.companyStatistics.increase) { %>
+                                                        &#8593;
+                                                        <% } else { %> &#8595; <%} %>
+                                                        <div class="per">by <%= insights.linkedin.companyStatistics.difference %>%</div>
+                                                    </div>
+                                                    <div class="key">Company Stats (Comparison)</div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="value">
+                                                        <%if (insights.linkedin.followerStatistics.increase) { %>
+                                                            &#8593;
+                                                            <% } else { %> &#8595; <%} %>
+                                                            <div class="per">by <%= insights.linkedin.followerStatistics.difference %>%</div>
+                                                        </div>
+                                                        <div class="key">Follower Stats (Comparison)</div>
+                                                    </fieldset>
+                                                    <fieldset>
+                                                        <div class="value">
+                                                            <%if (insights.linkedin.socialAction.increase) { %>
+                                                                &#8593;
+                                                                <% } else { %> &#8595; <%} %>
+                                                                <div class="per">by <%= insights.linkedin.socialAction.difference %>%</div>
+                                                            </div>
+                                                            <div class="key">Social Action (Comparison)</div>
+                                                        </fieldset>
                                     
                                 </div>
                             </div>
