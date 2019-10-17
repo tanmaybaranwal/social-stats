@@ -12,12 +12,12 @@ app.get('/', async function (req, res) {
   const linkedinInsights = await getLinkedinInsights()
   console.log(facebookInsights)
   console.log(linkedinInsights)
-  res.render('index', {insights: { facebook: 43 }, error: null});
+  res.render('index', {insights: { facebook: facebookInsights }, error: null});
 })
 
-function to_datetime(time){
-  var date = new Date((time || "").replace(/-/g,"/").replace(/[TZ]/g," ")),
-  return date
+function to_datetime(time) {
+  var date = new Date((time || "").replace(/-/g,"/").replace(/[TZ]/g," "))
+  return date;
 }
 
   
@@ -35,6 +35,7 @@ function formatFacebookInsight(fb_response){
     v2 = each.values[1]
     current_value = 0
     previous_value = 0 
+    console.log(to_datetime(v1.end_time))
     if (to_datetime(v1.end_time) < to_datetime(v2.end_time)) {
       current_value = v2.value
       previous_value = v1.value
@@ -42,8 +43,14 @@ function formatFacebookInsight(fb_response){
       current_value = v1.value
       previous_value = v2.value
     }
-    fb_ins[each.name]
+    fb_ins[each.name] = {
+      "current_value": current_value,
+      "previous_value": previous_value,
+      "increase": previous_value < current_value,
+      "difference": (100 * Math.abs( (current_value - previous_value) / ( (current_value+previous_value)/2 ) )).toFixed(2)
+    }
   })
+  return fb_ins;
 }
 
 function getFacebookInsight() {
@@ -57,7 +64,7 @@ function getFacebookInsight() {
           'Content-Type': 'application/json'                            
         },
       }).then(function (response) {
-        updateResult = response["data"]
+        updateResult = formatFacebookInsight(response.data)
       })
       .catch(function (error) {
         console.log(error);

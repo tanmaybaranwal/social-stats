@@ -24,65 +24,57 @@
                     <div class="insight">
                         
                         <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
+                            <div class="value"><%= insights.facebook.page_views_total.current_value %></div>
                             <div class="key">Total Page Views</div>
                         </fieldset>
                         <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
+                            <div class="value"><%= insights.facebook.page_impressions_unique.current_value %></div>
                             <div class="key">Page Impressions</div>
                         </fieldset>
                         <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Post Engagement</div>
+                            <div class="value"><%= insights.facebook.page_post_engagements.current_value %></div>
+                            <div class="key">Page Engagement</div>
                         </fieldset>
                         <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Page Views (Comparison)</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Impressions (Comparison)</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Engagement (Comparison)</div>
-                        </fieldset>
+                            <div class="value">
+                                <%if (insights.facebook.page_views_total.increase) { %>
+                                    &#8593;
+                                    <% } else { %> &#8595; <%} %>
+                                    <div class="per">by <%= insights.facebook.page_views_total.difference %>%</div>
+                                </div>
+                                <div class="key">Page Views (Comparison)</div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="value">
+                                    <%if (insights.facebook.page_impressions_unique.increase) { %>
+                                        &#8593;
+                                        <% } else { %> &#8595; <%} %>
+                                        <div class="per">by <%= insights.facebook.page_impressions_unique.difference %>%</div>
+                                    </div>
+                                    <div class="key">Impressions (Comparison)</div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="value">
+                                        <%if (insights.facebook.page_post_engagements.increase) { %>
+                                            &#8593;
+                                            <% } else { %> &#8595; <%} %>
+                                            <div class="per">by <%= insights.facebook.page_post_engagements.difference %>%</div>
+                                        </div>
+                                        <div class="key">Engagement (Comparison)</div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="tile">
+                                <h3 class="tile-title">LinkedIn</h3>
+                                <div class="insight">
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="tile">
-                    <h3 class="tile-title">LinkedIn</h3>
-                    <div class="insight">
-                        
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Page Views</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Total Page Likes</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Total Page Likes</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Total Page Likes</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Total Page Likes</div>
-                        </fieldset>
-                        <fieldset>
-                            <div class="value"><%= insights.facebook %></div>
-                            <div class="key">Total Page Likes</div>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+                </main>
+            </body>
+            </html>

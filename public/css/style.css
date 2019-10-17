@@ -129,3 +129,8 @@ fieldset .key {
   width: 150px;
   text-align: center;
 }
+
+fieldset .per {
+  margin-bottom: -10px ;
+  font-size: 10px;
+}
